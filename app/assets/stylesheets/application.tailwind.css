@@ -11,3 +11,56 @@
 }
 
 */
+/* section.movie{
+  background-color: black;
+  display: flex;
+  justify-content: flex-start;
+  align-items:center;
+  max-width: 24rem;
+  margin-left: 250;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 20px 25px -5px rgb(252, 252, 252), 0 10px 10px -5px rgb(250, 234, 234);
+}
+
+h2.movie-title{
+
+} */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Movie card base styles */
+.movie {
+  position: relative;  /* Make sure the glow is applied correctly */
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Light shadow for initial state */
+  transition: transform 0.3s ease-in-out;  /* Smooth hover transition for lift */
+}
+
+/* Hover effects */
+.movie:hover {
+  transform: translateY(-5px);  /* Slightly lift the card on hover */
+  animation: glow 1.5s infinite ease-in-out;  /* Apply the glow animation */
+}
+
+/* Glow animation keyframes */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.5), 0 0 20px rgba(37, 99, 235, 0.4);  /* Initial glow */
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(37, 99, 235, 1), 0 0 30px rgba(37, 99, 235, 0.8);  /* Stronger glow */
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.5), 0 0 20px rgba(37, 99, 235, 0.4);  /* Back to initial glow */
+  }
+}
+
+/* Custom hover effect for links */
+a:hover {
+  text-decoration: underline;
+  color: #2563eb;  /* Tailwind's blue-600 */
+}

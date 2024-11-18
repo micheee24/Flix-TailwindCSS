@@ -12,21 +12,64 @@
   </head>
 
 
-    <main class="container mx-auto mt-28 px-5 flex">
-  <header>
-    <%= image_tag("logo.png") %>
-  </header>
+    <main style="background-color: #1F2A32;">
+<header style="border: 2px solid #3C4F5B; padding: 10px; margin-bottom: 20px; text-align: center;">
+  <%= image_tag("logo.png", alt: "Super-Heroic Flix Logo") %>
+</header>
 
   <div class="content">
     <%= yield %>
   </div>
 
-  <footer>
-    <p>
-      Copyright &copy; <%= Time.now.year %>
-      <%= link_to "The Pragmatic Studio", "https://pragmaticstudio.com" %>
-    </p>
-  </footer>
+<footer class="background-color: #1F2A32; text-white py-8">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start">
+      
+      <!-- Company Logo and Info -->
+      <div class="mb-6 sm:mb-0">
+        <h2 class="text-2xl font-semibold">Your Company</h2>
+        <p class="text-gray-400 mt-2">Your company description or tagline goes here. Lorem ipsum dolor sit amet, consectetur.</p>
+      </div>
+
+      <!-- Links Section -->
+      <div class="flex flex-col sm:flex-row sm:space-x-12 mt-6 sm:mt-0">
+        <div class="flex flex-col mb-6 sm:mb-0">
+          <h3 class="font-semibold text-lg mb-2">Quick Links</h3>
+          <ul class="text-gray-400">
+            <li><a href="#" class="hover:text-blue-500 transition">About Us</a></li>
+            <li><a href="#" class="hover:text-blue-500 transition">Services</a></li>
+            <li><a href="#" class="hover:text-blue-500 transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="flex flex-col sm:flex-row mb-6 sm:mb-0">
+          <h3 class="font-semibold text-lg mb-2 sm:mb-0">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-blue-500 transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-blue-500 transition">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-blue-500 transition">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-blue-500 transition">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Line (Legal Info) -->
+    <div class="border-t border-gray-700 pt-6 mt-6 text-center">
+      <p class="text-gray-500 text-sm">© 2024 Your Company. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
     </main>
 
 </html>
